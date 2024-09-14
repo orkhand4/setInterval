@@ -1,15 +1,20 @@
-class User {
-  constructor(x, y, z) {
-    this.name = x;
-    this.surname = y;
-    this.age = z;
+class Person {
+  constructor(name, surname, age, location) {
+    this.name = name;
+    this.surname = surname;
+    this.age = age;
+    this.location -location;
   }
 }
 
-const user1 = new User('Zahid', 'Vahabzade', 12);
-const user2 = new User('Orxan', 'Aliyev', 14);
-const user3 = new User('Fuad', 'Mikayilov', 13);
+class Director extends Person {
+  constructor(name, surname, age, location, specialty, salary) {
+    super(name, surname, age, location);
+    this.specialty = specialty;
+    this.salary = salary;
+  }
+}
 
-console.log(user1);
-console.log(user2);
-console.log(user3);
+const director1 = new Director('Zahid', 'Vahabzade', 12, 'Baki', 'Devops', 1200)
+console.log(director1);
+
