@@ -1,13 +1,15 @@
-const demo = () => {
-  return new Promise((resolve, reject)=> setTimeout(resolve,5000));
-};
+class User {
+  constructor(x, y, z) {
+    this.name = x;
+    this.surname = y;
+    this.age = z;
+  }
+}
 
-const memo = async () => {
-  console.log('hakuna');
-  await demo();
-  console.log('matata');
-  console.log('huba muba');
-};
+const user1 = new User('Zahid', 'Vahabzade', 12);
+const user2 = new User('Orxan', 'Aliyev', 14);
+const user3 = new User('Fuad', 'Mikayilov', 13);
 
-memo()
-
+console.log(user1);
+console.log(user2);
+console.log(user3);
